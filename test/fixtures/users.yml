@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2023-07-25
+  usuario: MyString
+  numero: MyString
+  operacion: 1
+  saldo_inicial: 1
+  saldo_final: 1
+
+two:
+  fecha: 2023-07-25
+  usuario: MyString
+  numero: MyString
+  operacion: 1
+  saldo_inicial: 1
+  saldo_final: 1

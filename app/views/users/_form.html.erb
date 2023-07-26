@@ -1,0 +1,27 @@
+<%= form_with model: @user do |form| %>
+  <% @user.errors.full_messages.each do |error| %>
+    <div>
+      <%= error %>
+    </div>  
+  <% end %>
+  <br>
+  <div>
+    <%= form.label :usuario %>
+    <%= form.text_field :usuario %>
+  </div>
+
+  <div>
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div>
+    <%= form.label :captcha %>
+    <%= form.check_box :captcha %>
+  </div>
+
+  <div>
+    <%= form.submit "Nuevo", name: "new" %>
+    <%= form.submit "Registrar", name: "register" %>
+  </div>
+<% end %>
