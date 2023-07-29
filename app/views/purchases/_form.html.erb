@@ -13,6 +13,7 @@
 		<%= form.label :monto, "Paquete a comprar" %>
 		<%= form.select :monto, options_for_select([['10 USD', 10], ['20 USD', 20], ['50 USD', 50], ['100 USD', 100]]) %>
 	</div>
+
 	<div>
     <%= form.submit "Nuevo", name: "new" %>
     <%= form.submit "Comprar", name: "button_type", value: "comprar" %>
