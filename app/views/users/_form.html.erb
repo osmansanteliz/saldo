@@ -1,32 +1,36 @@
-<%= form_with model: @user do |form| %>
-  <% @user.errors.full_messages.each do |error| %>
-    <div>
-      <%= error %>
-    </div>  
+<div class="container">
+  <%= form_with model: @user do |form| %>
+    <% @user.errors.full_messages.each do |error| %>
+      <div class="error">
+        <%= error %>
+      </div>  
+    <% end %>
+    <br>
+    <div class="form-field">
+      <h1> Registro de Usuarios </h1>
+      <h2><%= Date.today %></h2>
+      <%= form.label :usuario %>
+      <%= form.text_field :usuario %>
+    </div>
+
+    <div class="form-field">
+      <%= form.label :numero %>
+      <%= form.text_field :numero %>
+    </div>
+
+    <div class="form-field">
+      <%= form.label :captcha %>
+      <%= form.check_box :captcha %>
+    </div>
+
+    <div class="form-actions">
+      <%= form.submit "Nuevo", name: "new" %>
+      <%= form.submit "Registrar", name: "register" %>
+    </div>
+    <br>
+    <div class="comprar-saldo">
+      <%= link_to 'Comprar saldo', new_purchase_path %>
+    </div>
+    
   <% end %>
-  <br>
-  <div>
-    <%= form.label :usuario %>
-    <%= form.text_field :usuario %>
-  </div>
-
-  <div>
-    <%= form.label :numero %>
-    <%= form.text_field :numero %>
-  </div>
-
-  <div>
-    <%= form.label :captcha %>
-    <%= form.check_box :captcha %>
-  </div>
-
-  <div>
-    <%= form.submit "Nuevo", name: "new" %>
-    <%= form.submit "Registrar", name: "register" %>
-  </div>
-  <br>
-  <div>
-    <%= link_to 'Comprar saldo', new_purchase_path %>
-  </div>
-  
-<% end %>
+</div>
