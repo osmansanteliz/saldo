@@ -1,0 +1,58 @@
+<form action="<%= request.path %>">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" value="<%= params[:fecha] %>">
+        </th>
+        <th>
+          <label for="usuario">Usuario:</label>
+          <input type="text" id="usuario" name="usuario" value="<%= params[:usuario] %>">
+        </th>
+        <th>
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" name="telefono" value="<%= params[:telefono] %>">
+        </th>
+        <th>
+          <label for="monto">Paquetes:</label>
+          <input type="text" id="monto" name="monto" value="<%= params[:monto] %>">
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
+  <input type="submit" value="Filtrar">
+</form>
+
+<table>
+   <thead>
+      <tr>
+      <td>Fecha</td>
+      <td>Usuario</td>
+      <td>Numero</td>
+      <td>Operacion</td>
+      <td>Saldo Inicial</td>
+      <td>Saldo Final</td>
+      </tr>
+   </thead>
+   <tbody>
+      <% @users.each do |u| %>
+        <% u.purchases.each do |c| %> 
+          <tr>
+            <td> <%= c.purchase_date %> </td>
+            <td> <%= u.usuario %> </td>
+            <td> <%= u.numero %></td>
+            <td> <%= c.monto %></td>
+            <td> <%= u.saldo_inicial %></td>
+            <td> <%= u.saldo_final %></td>
+          </tr>
+        <% end -%> 
+      <% end -%>
+   </tbody>
+
+</table>
+<br>
+<div>
+   <%= link_to 'Registrar Usuario', new_user_path %>
+</div>

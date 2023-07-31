@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+div.form-field {
+  margin-bottom: 10px;
+}
+
+div.form-field label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 10px;
+}
+
+div.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+div.form-actions {
+  margin-top: 10px;
+}
+
+div.form-actions input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+div.form-actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.comprar-saldo a {
+  color: #007bff;
+  background-color: #007bff;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 15px;
+ 
+}
+
+.comprar-saldo a:hover {
+  text-decoration: underline;
+  background-color: #0056b3;
+}
+
+.form-field h1{
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-field h2{
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}

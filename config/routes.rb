@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   resources :purchases, only: [:new, :create]
+
+  get 'control_panel', to: 'control_panel#index'
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
