@@ -1,3 +1,6 @@
-<%= notice %>
-
-<%= alert %>
+<% flash.each do |key, message| %>
+	<div class="flash <%= key %>">
+		<%= message %>
+		<button class="close-button" onclick="this.parentElement.style.display='none'">X</button>
+	</div>
+<% end -%>	

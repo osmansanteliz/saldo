@@ -13,3 +13,179 @@
  *= require_tree .
  *= require_self
  */
+
+.containe {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.formf label,
+.forms label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 10px;
+}
+
+div.formf input[type="text"],
+.forms select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.forms select {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.form-actions input[type="submit"] {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form-actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.registraruser a,
+.controlpanel a {
+  color: #007bff;
+  background-color: #007bff;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 15px;
+}
+
+.registraruser a:hover,
+.controlpanel a:hover {
+  text-decoration: underline;
+  background-color: #0056b3;
+}
+
+.registraruser a,
+.controlpanel a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.formf h1{
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.formf h2{
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.data thead td, thead th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+}
+
+thead th label {
+  font-weight: normal;
+}
+
+tbody td {
+  padding: 8px;
+  border-top: 1px solid #ccc;
+}
+
+input[type="date"],
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.flash {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.notice {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+}
+
+.alert {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #f44336;
+  border: none;
+  font-size: 16px;
+  color: white;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}

@@ -1,28 +1,32 @@
-<%= form_with model: @purchase do |form| %>
-	<% @purchase.errors.full_messages.each do |error| %>
-		<div>
-			<%= error %>
+<div class="containe">
+	<%= form_with model: @purchase do |form| %>
+		<% @purchase.errors.full_messages.each do |error| %>
+			<div class="error">
+				<%= error %>
+			</div>
+		<% end -%>
+
+		<div class="formf">
+			<h1> Comprar Saldo </h1>
+			<h2><%= Date.today %></h2>
+			<%= form.label :numero %>
+			<%= form.text_field :numero %>
 		</div>
-	<% end -%>
+		<div class="forms">
+			<%= form.label :monto, "Paquete a comprar" %>
+			<%= form.select :monto, options_for_select([['10 USD', 10], ['20 USD', 20], ['50 USD', 50], ['100 USD', 100]]) %>
+		</div>
 
-	<div>
-		<%= form.label :numero %>
-		<%= form.text_field :numero %>
-	</div>
-	<div>
-		<%= form.label :monto, "Paquete a comprar" %>
-		<%= form.select :monto, options_for_select([['10 USD', 10], ['20 USD', 20], ['50 USD', 50], ['100 USD', 100]]) %>
-	</div>
+		<div class="form-actions">
+	    <%= form.submit "Nuevo", name: "new" %>
+	    <%= form.submit "Comprar", name: "button_type", value: "comprar" %>
+	  </div> <br>
+	  <div class="registraruser">
+	    <%= link_to 'Registrar Usuario', new_user_path %>
+	  </div><br>
+	   <div class="controlpanel">
+	    <%= link_to 'Panel de Control', control_panel_path %>
+	  </div>
 
-	<div>
-    <%= form.submit "Nuevo", name: "new" %>
-    <%= form.submit "Comprar", name: "button_type", value: "comprar" %>
-  </div> <br>
-  <div>
-    <%= link_to 'Registrar Usuario', new_user_path %>
-  </div><br>
-   <div>
-    <%= link_to 'Panel de Control', control_panel_path %>
-  </div>
-
-<% end %>
+	<% end %>
+</div>
